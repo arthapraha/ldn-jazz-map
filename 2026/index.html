@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unofficial map of EFG London Jazz Festival 2026 events</title>
+<meta name="description" content="Unofficial fan-made map of London Jazz Festival 2026 events, 9–22 Nov 2026. Not affiliated with Serious or EFG.">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" integrity="sha384-pmjIAcz2bAn0xukfxADbZIb3t8oRT9Sv0rvO+BR5Csr6Dhqq+nZs59P0pPKQJkEV" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" integrity="sha384-wgw+aLYNQ7dlhK47ZPK7FRACiq7ROZwgFNg0m04avm4CaXS+Z9Y7nMu8yNjBKYC+" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Unofficial map of EFG London Jazz Festival 2026 events</h1>
+  <p class="sub">350 events at 96 venues, 9–22 Nov 2026. Tickets and full details are on the <a href="https://efglondonjazzfestival.org.uk/whats-on" rel="noopener" target="_blank">official festival site</a>.</p>
+</header>
+
+<section class="filters" aria-label="Filters">
+  <input id="q" type="search" placeholder="Search event, venue or area" aria-label="Search">
+  <div id="days" class="chips" aria-label="Day"></div>
+  <div id="cats" class="chips" aria-label="Category"></div>
+  <p id="count" aria-live="polite"></p>
+</section>
+
+<div id="map" role="region" aria-label="Map of venues"></div>
+
+<section aria-label="Events list">
+  <ul id="list"></ul>
+</section>
+
+<footer>
+  <p>This is an unofficial, fan-made map. It is not affiliated with, endorsed by or connected to Serious Ltd, EFG or the London Jazz Festival. "London Jazz Festival" is a registered trade mark of its owner. Event facts (titles, dates, venues) were collected from <a href="https://efglondonjazzfestival.org.uk/whats-on" rel="noopener" target="_blank">efglondonjazzfestival.org.uk</a> on 26 Oct 2026 and may have changed; always check the official event page before you go. Times were collected on 26 Oct 2026 and may change; check the official event page before you go.</p>
+  <p>Photos come from Wikimedia Commons under the licence named in each credit line (CC BY, CC BY-SA, CC0, public domain, or another free licence named in the credit); click a credit to see the file page. Performer photos show the named artist, sometimes with other musicians, and do not imply endorsement. "In tribute to" photos show the musician an event honours, who is not performing. Where no free photo of the act exists, the venue's building is shown, or a coloured tile. No images from the festival are used.</p>
+  <p>Venue locations from postcodes via <a href="https://postcodes.io" rel="noopener" target="_blank">postcodes.io</a> (contains OS and Royal Mail data © Crown copyright and database right). Map data © <a href="https://www.openstreetmap.org/copyright" rel="noopener" target="_blank">OpenStreetMap</a> contributors. Built with Leaflet.</p>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" integrity="sha384-eXVCORTRlv4FUUgS/xmOyr66XBVraen8ATNLMESp92FKXLAMiKkerixTiBvXriZr" crossorigin="anonymous"></script>
+<script src="app.js"></script>
+</body>
+</html>
